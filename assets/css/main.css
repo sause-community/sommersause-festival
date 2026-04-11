@@ -2609,9 +2609,19 @@ input, select, textarea {
 			width: 100%;
 		}
 
-			.image.main img {
-				width: 100%;
-			}
+		.image.main img {
+			width: 100%;
+		}
+
+	.sommersause-image {
+		margin: 0 auto;
+		width: 100%;
+	}
+
+		.sommersause-image img {
+			height: auto;
+			width: 100%;
+		}
 
 /* List */
 
@@ -3238,6 +3248,20 @@ input, select, textarea {
 		.wrapper.alt {
 			background-color: #261c3e;
 		}
+
+		.wrapper.sommersause-banner > .inner {
+			padding-top: 3em;
+			padding-bottom: 1.5em;
+		}
+
+			@media screen and (max-width: 736px) {
+
+				.wrapper.sommersause-banner > .inner {
+					padding-top: 2em;
+					padding-bottom: 0.5em;
+				}
+
+			}
 
 		.wrapper.style1 {
 			background-color: #5e42a6;
