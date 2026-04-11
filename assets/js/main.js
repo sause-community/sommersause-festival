@@ -10,6 +10,18 @@
 		$body = $('body'),
 		$sidebar = $('#sidebar');
 
+	function updateHash(hash) {
+
+		if (!hash || hash.charAt(0) != '#')
+			return;
+
+		if (window.history && window.history.replaceState)
+			window.history.replaceState(null, '', hash);
+		else
+			window.location.hash = hash;
+
+	}
+
 	// Breakpoints.
 		breakpoints({
 			xlarge:   [ '1281px',  '1680px' ],
@@ -67,6 +79,8 @@
 							.addClass('active')
 							.addClass('active-locked');
 
+					updateHash($this.attr('href'));
+
 				})
 				.each(function() {
 
@@ -99,12 +113,15 @@
 
 										$sidebar_a.removeClass('active');
 										$this.addClass('active');
+										updateHash(id);
 
 									}
 
 								// Otherwise, if this section's link is the one that's locked, unlock it.
-									else if ($this.hasClass('active-locked'))
+									else if ($this.hasClass('active-locked')) {
 										$this.removeClass('active-locked');
+										updateHash(id);
+									}
 
 							}
 						});
