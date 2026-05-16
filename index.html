@@ -215,7 +215,7 @@
 				padding-top: 0.85em;
 			}
 
-			@media screen and (max-width: 736px) {
+			@media screen and (max-width: 1280px) {
 				#sidebar {
 					display: block;
 					height: 3.5em;
@@ -253,22 +253,25 @@
 				}
 
 				#sidebar nav a {
-					height: inherit;
-					line-height: inherit;
+					height: auto;
+					line-height: 1;
 					font-size: 0.58em;
 					letter-spacing: 0.18em;
-					padding: 0 0.15em;
+					padding: 0.95em 0.15em;
 					white-space: nowrap;
+					color: rgba(255, 255, 255, 0.82);
 				}
 
 				#sidebar nav a:after {
-					bottom: 0.45em;
+					bottom: 0.35em;
 				}
 
 				#sidebar + #wrapper {
 					padding-top: 3.5em;
 				}
+			}
 
+			@media screen and (max-width: 736px) {
 				#welcome.wrapper.fullscreen {
 					min-height: 66vh;
 				}
