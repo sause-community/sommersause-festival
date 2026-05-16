@@ -216,6 +216,59 @@
 			}
 
 			@media screen and (max-width: 736px) {
+				#sidebar {
+					display: block;
+					height: 3.5em;
+					line-height: 3.5em;
+					padding: 0 0.65em;
+					text-align: left;
+					overflow-x: auto;
+					overflow-y: hidden;
+					-webkit-overflow-scrolling: touch;
+				}
+
+				#sidebar > .inner {
+					display: block;
+					height: 100%;
+					min-height: 0;
+				}
+
+				#sidebar nav {
+					height: 100%;
+				}
+
+				#sidebar nav > ul {
+					display: flex;
+					flex-wrap: nowrap;
+					gap: 1.05em;
+					height: 100%;
+					margin: 0;
+					padding: 0;
+				}
+
+				#sidebar nav > ul > li {
+					margin: 0;
+					line-height: inherit;
+					flex: 0 0 auto;
+				}
+
+				#sidebar nav a {
+					height: inherit;
+					line-height: inherit;
+					font-size: 0.58em;
+					letter-spacing: 0.18em;
+					padding: 0 0.15em;
+					white-space: nowrap;
+				}
+
+				#sidebar nav a:after {
+					bottom: 0.45em;
+				}
+
+				#sidebar + #wrapper {
+					padding-top: 3.5em;
+				}
+
 				#welcome.wrapper.fullscreen {
 					min-height: 66vh;
 				}
