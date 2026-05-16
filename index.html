@@ -76,7 +76,162 @@
 				white-space: pre-line;
 			}
 
+			#welcome.wrapper.fullscreen {
+				min-height: 76vh;
+				overflow: hidden;
+				background:
+					radial-gradient(circle at 12% 18%, rgba(48, 153, 255, 0.48), transparent 42%),
+					radial-gradient(circle at 90% 20%, rgba(255, 62, 62, 0.42), transparent 40%),
+					radial-gradient(circle at 68% 78%, rgba(255, 224, 47, 0.35), transparent 38%),
+					linear-gradient(130deg, #141e7b 0%, #2a1f74 35%, #49167a 70%, #201b5a 100%);
+			}
+
+			#welcome::before {
+				content: '';
+				position: absolute;
+				inset: -12% -8%;
+				background:
+					radial-gradient(circle at 25% 65%, rgba(255, 70, 140, 0.25), transparent 35%),
+					radial-gradient(circle at 80% 35%, rgba(0, 186, 255, 0.3), transparent 38%),
+					radial-gradient(circle at 60% 80%, rgba(255, 190, 0, 0.25), transparent 34%);
+				filter: blur(28px);
+				pointer-events: none;
+				z-index: 0;
+			}
+
+			#welcome .inner {
+				position: relative;
+				z-index: 1;
+			}
+
+			#welcome .welcome-poster {
+				margin-bottom: 1.3em;
+			}
+
+			#welcome .welcome-word {
+				margin: 0;
+				font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+				font-size: clamp(2.8rem, 11vw, 7rem);
+				line-height: 0.83;
+				letter-spacing: 0.03em;
+				text-transform: uppercase;
+			}
+
+			#welcome .welcome-word.word-back {
+				color: rgba(115, 142, 255, 0.7);
+				transform: translateX(0.5rem);
+				text-shadow: 0 0 18px rgba(67, 122, 255, 0.55);
+			}
+
+			#welcome .welcome-word.word-mid {
+				color: rgba(255, 76, 76, 0.9);
+				transform: translateY(-0.05em);
+				text-shadow: 0 0 16px rgba(255, 68, 68, 0.45);
+			}
+
+			#welcome .welcome-word.word-front {
+				color: #ffd628;
+				text-shadow:
+					0 0 8px rgba(255, 214, 40, 0.45),
+					0 0 22px rgba(255, 214, 40, 0.4);
+				transform: translateY(-0.08em);
+			}
+
+			#welcome .welcome-place {
+				margin: 0.25em 0 0.15em 0;
+				font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+				font-size: clamp(1.5rem, 4.2vw, 3.1rem);
+				letter-spacing: 0.08em;
+				line-height: 1;
+				color: #ff2a2a;
+				text-transform: uppercase;
+				text-shadow: 0 0 14px rgba(255, 42, 42, 0.45);
+			}
+
+			#welcome .welcome-year {
+				margin: 0.02em 0 0.28em 0;
+				font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+				font-size: clamp(4rem, 14vw, 8.5rem);
+				line-height: 0.9;
+				letter-spacing: 0.04em;
+				color: #ffe23a;
+				text-transform: uppercase;
+				text-shadow: 0 0 22px rgba(255, 226, 58, 0.45);
+			}
+
+			#welcome .welcome-meta {
+				font-size: clamp(1.2rem, 2.1vw, 1.9rem);
+				line-height: 1.5;
+				font-weight: 500;
+				color: rgba(255, 255, 255, 0.88);
+				margin-bottom: 1em;
+			}
+
+			#welcome .welcome-meta-value {
+				font-weight: 800;
+				color: #ffffff;
+			}
+
+			.visually-hidden {
+				position: absolute !important;
+				width: 1px;
+				height: 1px;
+				padding: 0;
+				margin: -1px;
+				overflow: hidden;
+				clip: rect(0, 0, 0, 0);
+				white-space: nowrap;
+				border: 0;
+			}
+
+			#mitmachen .features ul.actions {
+				margin-left: 0;
+				width: 100%;
+			}
+
+			#mitmachen .features ul.actions li {
+				padding-left: 0;
+				width: 100%;
+			}
+
+			#mitmachen .features ul.actions .button {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+				max-width: 100%;
+				height: auto;
+				min-height: 3.75em;
+				line-height: 1.35;
+				padding: 0.95em 1.4em;
+				white-space: normal;
+				word-break: normal;
+				overflow-wrap: break-word;
+				letter-spacing: 0.16em;
+				text-align: center;
+			}
+
+			#mitmachen .features ul.actions.stacked li + li {
+				padding-top: 0.85em;
+			}
+
 			@media screen and (max-width: 736px) {
+				#welcome.wrapper.fullscreen {
+					min-height: 66vh;
+				}
+
+				#welcome .welcome-poster {
+					margin-bottom: 1em;
+				}
+
+				#welcome .welcome-place {
+					margin-top: 0.18em;
+				}
+
+				#welcome .welcome-year {
+					margin-bottom: 0.2em;
+				}
+
 				#faq .faq-accordion-wrapper {
 					padding: 1.15em;
 				}
@@ -88,6 +243,11 @@
 
 				#faq .faq-item p {
 					padding: 0 0.9em 0.9em 0.9em;
+				}
+
+				#mitmachen .features ul.actions .button {
+					letter-spacing: 0.12em;
+					padding: 0.9em 1.05em;
 				}
 			}
 		</style>
@@ -113,17 +273,25 @@
 		<!-- Wrapper -->
 			<div id="wrapper">
 
-				<!-- Intro -->
-					<section id="welcome" class="wrapper style1 fullscreen fade-up">
-						<div class="inner">
-							<h1>Sommersause 2026 </h1>
-							<p>Save the date: 03.-05.07.2026 <br />
-							Location: Altes Freibad Hagenwerder <br />
-							<p>Diese Seite befindet sich im Aufbau. <br />	
-								<li><a href="#impressions" class="button scrolly">Erfahre mehr!</a></li>
-							</ul>
-						</div>
-					</section>
+						<!-- Intro -->
+							<section id="welcome" class="wrapper style1 fullscreen fade-up">
+								<div class="inner">
+									<div class="welcome-poster" aria-hidden="true">
+										<p class="welcome-word word-back">Sommersause</p>
+										<p class="welcome-word word-mid">Sommersause</p>
+										<p class="welcome-word word-front">Sommersause</p>
+										<p class="welcome-place">Hagenwerder</p>
+										<p class="welcome-year">2026</p>
+									</div>
+									<h1 class="visually-hidden">Sommersause 2026</h1>
+									<p class="welcome-meta">Save the date: <span class="welcome-meta-value">03.-05.07.2026</span><br />
+									Location: <span class="welcome-meta-value">Altes Freibad Hagenwerder</span></p>
+									<p>Diese Seite befindet sich im Aufbau.</p>
+								<ul class="actions">
+									<li><a href="#impressions" class="button scrolly">Erfahre mehr!</a></li>
+								</ul>
+							</div>
+						</section>
 
 					<!-- Sommersause image -->
 					<section class="wrapper sommersause-banner">
