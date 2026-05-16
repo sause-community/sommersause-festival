@@ -10,6 +10,87 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			#faq .faq-accordion-wrapper {
+				background: rgba(255, 255, 255, 0.04);
+				border-color: rgba(255, 255, 255, 0.25);
+				padding: 1.75em;
+			}
+
+			#faq .faq-accordion-wrapper h4 {
+				margin: 0 0 0.9em 0;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+			}
+
+			#faq .faq-item {
+				background: rgba(255, 255, 255, 0.05);
+				border: 1px solid rgba(255, 255, 255, 0.2);
+				border-radius: 0.45em;
+				margin: 0 0 0.85em 0;
+				overflow: hidden;
+				transition: border-color 0.2s ease, background-color 0.2s ease;
+			}
+
+			#faq .faq-item[open] {
+				background: rgba(255, 255, 255, 0.08);
+				border-color: rgba(255, 255, 255, 0.45);
+			}
+
+			#faq .faq-item summary {
+				cursor: pointer;
+				list-style: none;
+				font-weight: 600;
+				color: #ffffff;
+				padding: 0.95em 1.05em;
+				position: relative;
+				padding-right: 2.6em;
+			}
+
+			#faq .faq-item summary::-webkit-details-marker {
+				display: none;
+			}
+
+			#faq .faq-item summary::after {
+				content: '+';
+				position: absolute;
+				right: 0.95em;
+				top: 50%;
+				transform: translateY(-50%);
+				font-size: 1.2em;
+				line-height: 1;
+				opacity: 0.85;
+				transition: transform 0.2s ease, opacity 0.2s ease;
+			}
+
+			#faq .faq-item[open] summary::after {
+				content: '-';
+				opacity: 1;
+			}
+
+			#faq .faq-item p {
+				margin: 0;
+				padding: 0 1.05em 1em 1.05em;
+				color: rgba(255, 255, 255, 0.82);
+				line-height: 1.7;
+				white-space: pre-line;
+			}
+
+			@media screen and (max-width: 736px) {
+				#faq .faq-accordion-wrapper {
+					padding: 1.15em;
+				}
+
+				#faq .faq-item summary {
+					padding: 0.85em 0.9em;
+					padding-right: 2.35em;
+				}
+
+				#faq .faq-item p {
+					padding: 0 0.9em 0.9em 0.9em;
+				}
+			}
+		</style>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -23,6 +104,7 @@
 							<li><a href="#impressions">Eindrücke</a></li>
 							<li><a href="#about">Was wir machen</a></li>
 							<li><a href="#mitmachen">Mach mit!</a></li>
+							<li><a href="#faq">FAQ</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -35,7 +117,7 @@
 					<section id="welcome" class="wrapper style1 fullscreen fade-up">
 						<div class="inner">
 							<h1>Sommersause 2026 </h1>
-							<p>Safe the date: 03.-05.07.2026 <br />
+							<p>Save the date: 03.-05.07.2026 <br />
 							Location: Altes Freibad Hagenwerder <br />
 							<p>Diese Seite befindet sich im Aufbau. <br />	
 								<li><a href="#impressions" class="button scrolly">Erfahre mehr!</a></li>
@@ -95,7 +177,7 @@
 						<div class="inner">
 							<h2>Was wir machen</h2>
 							<p>Der Verein bildet die Basis: Fördermitgliedschaften sichern Planungssicherheit und ermöglichen ein nachhaltiges Festival, in dem alle mitgestalten können. Ziel ist ein tragfähiges, kollektives Konzept, das Raum für kreative Ideen bietet.</p>
-							<div class="features">
+								<div class="features">
 								<section>
 									<span class="icon solid major fa-hand-holding-heart"></span>
 									<h3>Vereinsbasis & Community</h3>
@@ -120,7 +202,6 @@
 							<ul class="actions">
 								<li><a href="#mitmachen" class="button scrolly">Mach mit!</a></li>
 							</ul>
-							<p class="note">Mehr Infos und der Aufnahmeantrag sind im Anhang der Info — Fragen? <a href="mailto:sause.community@gmail.com">sause.community@gmail.com</a></p>
 						</div>
 					</section>
 
@@ -204,12 +285,26 @@
 									<ul class="actions stacked">
 										<li><a href="https://drive.google.com/file/d/1sOHg5JLNQGTxfNG4JayVEYnnqtJJlRCd/view?usp=share_link" class="button" target="_blank" rel="noopener noreferrer">Satzung</a></li>
 										<li><a href="https://drive.google.com/file/d/1zeSF3cJtXi3--_nPCU-9R9-GbfyTD3C2/view?usp=share_link" class="button" target="_blank" rel="noopener noreferrer">Beitragsordnung</a></li>
+										</ul>
+										</section>
+									</div>
+									<ul class="actions">
+										<li><a href="#faq" class="button scrolly">Zum FAQ</a></li>
 									</ul>
-								</section>
+									<p>Fragen oder Interesse? Schreib an <a href="mailto:sause.community@gmail.com">sause.community@gmail.com</a> oder komm direkt zu einem unserer Treffen vorbei.</p>
+								</div>
+							</section>
+
+					<!-- Four -->
+						<section id="faq" class="wrapper style2 fade-up">
+							<div class="inner">
+								<h2>FAQ</h2>
+								<p>Hier findest du die wichtigsten Fragen, gegliedert in <strong>Verein</strong> und <strong>Sause</strong>.</p>
+								<div class="box faq-accordion-wrapper" data-source="assets/data/faq.json">
+									<p>FAQ wird geladen ...</p>
+								</div>
 							</div>
-							<p>Fragen oder Interesse? Schreib an <a href="mailto:sause.community@gmail.com">sause.community@gmail.com</a> oder komm direkt zu einem unserer Treffen vorbei.</p>
-						</div>
-					</section>
+						</section>
 
 			</div>
 
@@ -230,6 +325,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/faq.js"></script>
 
 	</body>
 </html>
