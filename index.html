@@ -215,6 +215,77 @@
 				padding-top: 0.85em;
 			}
 
+			#mitmachen .mitmachen-flow {
+				display: flex;
+				flex-direction: column;
+				gap: 1.5em;
+				margin: 2em 0;
+			}
+
+			#mitmachen .flow-step {
+				border: solid 1px rgba(255, 255, 255, 0.15);
+				background: rgba(255, 255, 255, 0.05);
+				border-radius: 0.25em;
+				padding: 2.5em 3em;
+			}
+
+			#mitmachen .flow-step h3 {
+				margin-bottom: 0.5em;
+			}
+
+			#mitmachen .flow-step p:last-child,
+			#mitmachen .flow-step ul.actions:last-child {
+				margin-bottom: 0;
+			}
+
+			#mitmachen .mitmachen-flow ul.actions {
+				margin-left: 0;
+				width: 100%;
+			}
+
+			#mitmachen .mitmachen-flow ul.actions li {
+				padding-left: 0;
+				width: 100%;
+			}
+
+			#mitmachen .mitmachen-flow ul.actions .button {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+				max-width: 100%;
+				height: auto;
+				min-height: 3.75em;
+				line-height: 1.35;
+				padding: 0.95em 1.4em;
+				white-space: normal;
+				overflow-wrap: break-word;
+				letter-spacing: 0.16em;
+				text-align: center;
+			}
+
+			#mitmachen .flow-arrow {
+				align-self: center;
+				font-size: 2rem;
+				line-height: 1;
+				color: rgba(255, 255, 255, 0.75);
+			}
+
+			#mitmachen .membership-options {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 1.5em;
+			}
+
+			#mitmachen .membership-options .flow-step {
+				flex: 1 1 18rem;
+				margin: 0;
+			}
+
+			#mitmachen .faq-link-actions {
+				margin-top: 1em;
+			}
+
 				#sidebar .menu-toggle {
 					display: none;
 				}
@@ -374,7 +445,7 @@
 								<li><a href="#welcome">Willkommen</a></li>
 								<li><a href="#impressions">Eindrücke</a></li>
 								<li><a href="#about">Was wir machen</a></li>
-							<li><a href="#mitmachen">Mach mit!</a></li>
+							<li><a href="#mitmachen">Sei dabei!</a></li>
 							<li><a href="#faq">FAQ</a></li>
 						</ul>
 					</nav>
@@ -479,7 +550,7 @@
 								</section>
 							</div>
 							<ul class="actions">
-								<li><a href="#mitmachen" class="button scrolly">Mach mit!</a></li>
+								<li><a href="#mitmachen" class="button scrolly">Sei dabei!</a></li>
 							</ul>
 						</div>
 					</section>
@@ -488,7 +559,7 @@
 					<section id="mitmachen" class="wrapper style1 fade-up">
 						<!--
 						<div class="inner">
-							<h2>Mach mit!</h2>
+							<h2>Sei dabei!</h2>
 							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
 							<div class="split style1">
 								<section>
@@ -530,44 +601,73 @@
 						</div>
 						-->
 						<div class="inner">
-							<h2>Mitglied werden</h2>
-							<p>Wir wollen Probemitgliedschaften in echte Mitgliedschaften umwandeln und gleichzeitig neue Interessierte für den Verein gewinnen. Wenn du uns kennenlernen willst, komm jederzeit zum Stammtisch oder in die Planungsrunde am Montag.</p>
-							<div class="features">
-								<section>
-									<span class="icon solid major fa-users"></span>
-									<h3>Probemitgliedschaft</h3>
-									<p>Ideal zum Kennenlernen: Als Probemitglied kannst du Einblicke in den Verein bekommen, Kontakte knüpfen und direkt bei Treffen und Vorbereitungen dabei sein.</p>
-									<ul class="actions">
-										<li><a href="https://drive.google.com/file/d/19xELGPFKnwmxDdrmSKMEPZoifKQ5cesV/view?usp=share_link" class="button" target="_blank" rel="noopener noreferrer">Antrag Probemitgliedschaft</a></li>
-									</ul>
-								</section>
-								<section>
-									<span class="icon solid major fa-hand-holding-heart"></span>
-									<h3>Fördermitgliedschaft</h3>
-									<p>Mit einer Fördermitgliedschaft unterstützt du die Sommersause langfristig und hilfst dabei, Planungssicherheit für Infrastruktur, Programm und gemeinschaftliche Organisation zu schaffen.</p>
-									<ul class="actions">
-										<li><a href="https://drive.google.com/file/d/1uAYF8wAabOeeq98sODorAoOp3CmZZDes/view?usp=share_link" class="button" target="_blank" rel="noopener noreferrer">Antrag Fördermitgliedschaft</a></li>
-									</ul>
-								</section>
-								<section>
-									<span class="icon solid major fa-file-signature"></span>
-									<h3>Anmeldeformular</h3>
-									<p>Für neue Interessierte gibt es zusätzlich ein kurzes Formular. Darüber können wir dich zu Stammtisch, Planungsrunde und den nächsten Schritten rund um die Mitgliedschaft erreichen.</p>
-									<ul class="actions">
-										<li><a href="https://forms.gle/41eBUdBzmFYxEkRx6" class="button" target="_blank" rel="noopener noreferrer">Zum Anmeldeformular</a></li>
-									</ul>
-								</section>
-								<section>
-									<span class="icon solid major fa-book"></span>
-									<h3>Vereinsdokumente</h3>
-									<p>Alle wichtigen Grundlagen findest du hier: unsere Satzung und die Beitragsordnung als Orientierung für Mitgliedschaft, Rechte, Pflichten und Beiträge.</p>
-									<ul class="actions stacked">
-										<li><a href="https://drive.google.com/file/d/1sOHg5JLNQGTxfNG4JayVEYnnqtJJlRCd/view?usp=share_link" class="button" target="_blank" rel="noopener noreferrer">Satzung</a></li>
-										<li><a href="https://drive.google.com/file/d/1zeSF3cJtXi3--_nPCU-9R9-GbfyTD3C2/view?usp=share_link" class="button" target="_blank" rel="noopener noreferrer">Beitragsordnung</a></li>
-										</ul>
+							<h2>Sei dabei!</h2>
+							<p>Registrierung über das Anmeldeformular. Danach geht es Schritt für Schritt weiter.</p>
+							<section class="flow-step">
+								<h3>Registrierung</h3>
+								<p>Starte mit dem Anmeldeformular. Darüber beginnt der gesamte Ablauf.</p>
+								<ul class="actions">
+									<li><a href="https://forms.gle/41eBUdBzmFYxEkRx6" class="button" target="_blank" rel="noopener noreferrer">Zum Anmeldeformular</a></li>
+								</ul>
+							</section>
+							<div class="mitmachen-flow">
+								<section class="flow-step">
+									<h3>1. Mitgliedschaft wählen</h3>
+									<p>Wähle eine der beiden Optionen.</p>
+									<div class="membership-options">
+										<section class="flow-step">
+											<h3>Probemitgliedschaft</h3>
+											<p>Ideal zum Kennenlernen: einmalig, zeitlich begrenzt und gedacht für alle, die die Sommersause und den Verein zuerst erleben möchten.</p>
+											<ul class="actions">
+												<li><a href="https://drive.google.com/file/d/19xELGPFKnwmxDdrmSKMEPZoifKQ5cesV/view?usp=share_link" class="button" target="_blank" rel="noopener noreferrer">Probemitgliedschaft</a></li>
+											</ul>
+										</section>
+										<section class="flow-step">
+											<h3>Fördermitgliedschaft</h3>
+											<p>Für alle, die die Sommersause langfristig unterstützen und Planungssicherheit für Infrastruktur, Programm und Gemeinschaft ermöglichen wollen.</p>
+											<ul class="actions">
+												<li><a href="https://drive.google.com/file/d/1uAYF8wAabOeeq98sODorAoOp3CmZZDes/view?usp=share_link" class="button" target="_blank" rel="noopener noreferrer">Fördermitgliedschaft</a></li>
+											</ul>
 										</section>
 									</div>
-									<ul class="actions">
+								</section>
+								<div class="flow-arrow" aria-hidden="true">↓</div>
+								<section class="flow-step">
+									<h3>2. Kontaktdaten</h3>
+									<p>Im nächsten Schritt trägst du deine Kontaktdaten ein, damit wir deine Anmeldung zuordnen und dich zu den nächsten Schritten erreichen können.</p>
+								</section>
+								<div class="flow-arrow" aria-hidden="true">↓</div>
+								<section class="flow-step">
+									<h3>3. Mitgliedsbeitrag</h3>
+									<p>Die Probemitgliedschaft liegt bei 20–30 €. Die Fördermitgliedschaft kostet regulär 60 € im Jahr, ermäßigt 30 € für Studierende, Rentner:innen und Beziehende staatlicher Leistungen.</p>
+								</section>
+							</div>
+							<section class="flow-step">
+								<h3>Lern uns kennen</h3>
+								<div class="membership-options">
+									<section class="flow-step">
+										<h3>Stammtisch</h3>
+										<p>- jeden Mittwoch 18 Uhr<br />
+										- Demianiplatz 54<br />
+										- in der Sonne</p>
+									</section>
+									<section class="flow-step">
+										<h3>Online Planungsrunde</h3>
+										<p>- jeden zweiten Mittwoch<br />
+										- nächste Termine: 08.06. und 22.06. 19 Uhr<br />
+										- <a href="https://tu-berlin.zoom-x.de/j/68175093406?pwd=I2D9iOuK7JjO7BqhccjydRJXUNkGzX.1" target="_blank" rel="noopener noreferrer">Zum Meeting-Link</a></p>
+									</section>
+								</div>
+							</section>
+							<section class="flow-step">
+								<h3>Vereinsdokumente</h3>
+								<p>Alle wichtigen Grundlagen findest du hier: unsere Satzung und die Beitragsordnung als Orientierung für Mitgliedschaft, Rechte, Pflichten und Beiträge.</p>
+								<ul class="actions stacked">
+									<li><a href="https://drive.google.com/file/d/1sOHg5JLNQGTxfNG4JayVEYnnqtJJlRCd/view?usp=share_link" class="button" target="_blank" rel="noopener noreferrer">Satzung</a></li>
+									<li><a href="https://drive.google.com/file/d/1zeSF3cJtXi3--_nPCU-9R9-GbfyTD3C2/view?usp=share_link" class="button" target="_blank" rel="noopener noreferrer">Beitragsordnung</a></li>
+								</ul>
+							</section>
+									<ul class="actions faq-link-actions">
 										<li><a href="#faq" class="button scrolly">Zum FAQ</a></li>
 									</ul>
 									<p>Fragen oder Interesse? Schreib an <a href="mailto:sause.community@gmail.com">sause.community@gmail.com</a> oder komm direkt zu einem unserer Treffen vorbei.</p>
